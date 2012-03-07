@@ -8,8 +8,6 @@ instructions](https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/).
 This buildpack assumes your PostGIS server lives outside the Heroku stack, though we'd love to see it
 forked to handle any setup for Heroku's Postgres services.
 
-[![Build Status](https://secure.travis-ci.org/heroku/heroku-buildpack-python.png?branch=master)](http://travis-ci.org/heroku/heroku-buildpack-python)
-
 Usage
 -----
 
@@ -18,7 +16,7 @@ Example usage:
     $ ls
     Procfile  requirements.txt  web.py
 
-    $ heroku create --stack cedar --buildpack git://github.com/heroku/heroku-buildpack-python.git
+    $ heroku create --stack cedar --buildpack https://github.com/cirlabs/heroku-buildpack-geodjango/
 
     $ git push heroku master
     ...
@@ -36,10 +34,6 @@ Example usage:
            Installing collected packages: Flask, Werkzeug, Jinja2
            Successfully installed Flask Werkzeug Jinja2
            Cleaning up...
-
-You can also add it to upcoming builds of an existing application:
-
-    $ heroku config:add BUILDPACK_URL=git://github.com/heroku/heroku-buildpack-python.git
 
 The buildpack will detect your app as Python if it has the file `requirements.txt` in the root. It will detect your app as Python/Django if there is an additional `settings.py` in a project subdirectory.
 
