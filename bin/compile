@@ -26,19 +26,8 @@ indent() {
   [ $(uname) == "Darwin" ] && sed -l "$RE" || sed -u "$RE"
 }
 
-# Virtualenv wrapper.
 function virtualenv (){
-  python "$ROOT_DIR/vendor/virtualenv-1.7.2/virtualenv.py" "$@"
-}
-
-# Buildpack Steps.
-function puts-step (){
-  echo "-----> $@"
-}
-
-# Buildpack Warnings.
-function puts-warn (){
-  echo " !     $@"
+  python "$ROOT_DIR/src/virtualenv-1.7/virtualenv.py" "$@"
 }
 
 cd $BUILD_DIR
