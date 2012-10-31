@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
+echo "*****************compile file******************"
+
 set -eo pipefail
 
 # Prepend proper path for virtualenv hackery. Will be deprecated soon.

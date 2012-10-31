@@ -12,6 +12,8 @@
 #
 #     $ bin/detect <build-dir> <cache-dir>
 
+echo "*************detect file*************************"
+
 BUILD_DIR=$1
 
 # Exit early if app is clearly not Python.
