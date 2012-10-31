@@ -12,7 +12,7 @@
 #
 #     $ bin/detect <build-dir> <cache-dir>
 
-echo "*************detect file*************************"
+echo "*************detection file*************************"
 
 BUILD_DIR=$1
 
